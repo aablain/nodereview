@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  > * {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+form {
+  input {
+    padding: 5px;
+  }
+  button {
+    margin-left: 10px;
+  }
+}
