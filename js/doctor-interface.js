@@ -12,10 +12,13 @@ var displayDoctor = function(symptom, result) {
     // if (result.data[j].practices[0].phones !== undefined) {
       for(i=0; i < result.data[j].practices[0].phones.length; i++) {
         $('.answerHere .box:last .contact').append('<div class="contactNumber"></div>')
-        $('.answerHere .box:last .contact .contactNumber:last').append(result.data[j].practices[0].phones[i].type + ": " + result.data[j].practices[0].phones[i].number + " ");
+        $('.answerHere .box:last .contact .contactNumber:last').append('<i>' + result.data[j].practices[0].phones[i].type + "</i>: <b>" + result.data[j].practices[0].phones[i].number + "</b> ");
       }
     // $(".answerHere").append("</div>")
     // }
+  }
+  if (result.data.length === 0) {
+    $('.answerHere').append('<img src="http://www.westcomotors.com.au/site/user-assets/images/no-results.png">')
   }
 };
 

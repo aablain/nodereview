@@ -1,29 +1,79 @@
 .header {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
   flex-wrap: wrap;
-  height: 300px;
-  > * {
+  flex-basis: 100%;
+  text-align: center;
+  height: 200px;
+  padding-bottom: 80px;
+  text-shadow: 0px 0px 5px #222;
+  background-image: url('https://images.unsplash.com/photo-1467745791311-acbc96691653?dpr=2&auto=compress,format&fit=crop&w=1199&h=674&q=80&cs=tinysrgb&crop=');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: red;
+  font-family: 'Kalam', cursive;
+  font-weight: bold;
+  h1 {
+    color: #EB984E;
+    font-size: 2.8em;
+  }
+  & > * {
     flex-basis: 100%;
     display: flex;
     justify-content: center;
-    height: 50px;
-    align-self: center;
+    height: 40px;
   }
 }
-
 form {
-  input, button {
-    // height: 40px;
+  margin-top: -70px;
+  @media (max-width: 612px) {
+    margin-top: 0px;
+    margin-bottom: -110px
   }
+}
+input {
+  padding-left: 10px;
+  font-family: 'Kalam', cursive;
+  font-size: 1.1em;
+  margin-right: 5px;
+  border-radius: 3px;
+  border: none;
+  box-shadow: inset 0px 0px 5px #000;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  text-shadow: 3px 3px  5px #222;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: all 5000s ease-in-out 0s;
+}
+button {
+  font-size: 0.8em;
+  border-radius: 3px;
+  border: none;
+  font-weight: bold;
 }
 
 .answerHere {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  > div {
+  justify-content: center;
+  .box {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    &:hover {
+      transition: all 300ms ease-in-out;
+      transform: scale(1.03);
+      background-color: #EB984E;
+    }
+  }
+  & > div {
     flex-basis: 50%;
     display: flex;
     flex-direction: row;
@@ -32,7 +82,7 @@ form {
     @media (max-width: 750px) {
       flex-basis: 100%;
     }
-    > div {
+    & > div {
       display: flex;
       justify-content: center;
       align-items: center;
