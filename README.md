@@ -15,6 +15,9 @@ _{Takes inputted medical issue (;symptom), pulls information from BetterDoctors 
 * _Gulp_
 * _Bower_
 * _CORS chrome extension (for local server hosting on Google Chrome)_
+* _Run 'npm install' in terminal_
+* _Run 'bower install' in terminal_
+* _Create '.env' file with API-Key obtained from betterdoctor.com_
 
 ## Known Bugs
 

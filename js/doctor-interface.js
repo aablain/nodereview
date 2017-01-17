@@ -8,14 +8,10 @@ var displayDoctor = function(symptom, result) {
     $(".answerHere .box:last").append('<div class="name"></div>')
     $(".answerHere .box:last .name").append("Dr. " + result.data[j].profile.first_name + " " + result.data[j].profile.last_name + " from " + result.data[j].practices[0].name + " could help with your " + symptom + "!");
     $(".answerHere .box:last").append('<div class="contact"><h4>Contact:</h4></div>')
-    // $(".answerHere .box:last .contact:last").append(" Contact: ")
-    // if (result.data[j].practices[0].phones !== undefined) {
       for(i=0; i < result.data[j].practices[0].phones.length; i++) {
         $('.answerHere .box:last .contact').append('<div class="contactNumber"></div>')
         $('.answerHere .box:last .contact .contactNumber:last').append('<i>' + result.data[j].practices[0].phones[i].type + "</i>: <b>" + result.data[j].practices[0].phones[i].number + "</b> ");
       }
-    // $(".answerHere").append("</div>")
-    // }
   }
   if (result.data.length === 0) {
     $('.answerHere').append('<img src="http://www.westcomotors.com.au/site/user-assets/images/no-results.png">')
